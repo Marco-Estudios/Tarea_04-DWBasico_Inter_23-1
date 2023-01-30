@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    /* sin megen ni padding */
+    margin: 0;
+    padding: 0;
+    /* bordes dentro de las cajas */
+    box-sizing: border-box;
+    /* se utiliza esta tipografía en todo el documento */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* se establecen medidas para el cuerpo */
+    min-height: 100vh;
+    max-width: 100vw;
+    /* color de fondo del cuerpo */
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contenedor__tarjetas {
+    /* posición absoluta */
+    position: absolute;
+    /* medidas de la caja que contiene las tarjetas */
+    width: 90vw;
+    /* comportamiento de línea con propiedad de bloque */
+    display: inline-block;
+    /* alinea el contenido al centro */
+    text-align: center;
+    /* posición de la caja */
+    top: calc(50% - 500px/2);
+    left: calc(50% - 45vw);
+    /* background-color: yellow; */
+}
+
+.tarjeta {
+    /* se establece un margen y un padding */
+    margin: 10px;
+    padding: 20px;
+    /* tamaño de la caja */
+    width: 350px;
+    /* comportamiento de línea con propiedad de bloque */
+    display: inline-block;
+    /* características del borde */
+    border-top: 2px solid black;
+    border-right: 1px solid black;
+    border-left: 2px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 20px;
+    /* sombra de la caja */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta h2 {
+    /* tamaño de la fuente */
+    font-size: 40px;
+}
+
+.tarjeta p {
+    /* tamaño de la fuente */
+    font-size: 14px;
+    font-weight: 300;
+    /* espacio entre letras */
+    letter-spacing: 0.5px;
+}
+
+.tarjeta hr {
+    /* tamaño de la línea */
+    height: 0.2px;
+    /* margen superior de 20 poxeles */
+    margin-top: 20px;
+    /* color de la línea */
+    color: black;
+}
+
+.icono {
+    /* tamaño del contenedor del ícono */
+    height: 125px;
+    width: 100%;
+    /* se esconde el desbordamiento que pueda producirse */
+    overflow: hidden;
+}
+
+.icono i {
+    /* tamaño de la fuente del ícono */
+    font-size: 100px;
+}
+
+.footer__tarjeta {
+    /* comportamiento flexible, lo comporta como un bloque */
+    display: flex;
+    /* margen superior de 10 pixeles */
+    margin-top: 10px;
+    /* justifica el contenido al centro */
+    justify-content: center;
+}
+
+.footer__tarjeta a {
+    /* configuración del borde */
+    border-radius: 20px;
+    /* color de fondo */
+    background-color: black;
+    /* sin decoraciones */
+    text-decoration: none;
+}
+
+/* se le aplica propiedades del padding en lugar de a la etiqueta <a> que se le quita, de esta manera no hay área entre h3 y a que provoque que el texto contenido no cambie a blanco, en el caso del fondo sí cambia en área descrita. De esta manera por donde se aborde el botón cambia sus propiedades correctamente */
+.footer__tarjeta h3 {
+    /* configuración del padding */
+    padding-left: 40px;
+    padding-right: 40px;
+    /* configuración del borde */
+    border-radius: 20px;
+    /* tamaño de la fuente */
+    font-size: 20px;
+    font-weight: 500;
+    /* color de la fuente */
+    color: rgb(255, 255, 255)
+}
+
+.tarjeta--1:hover {
+    cursor: pointer;
+    /* degradado azul de fondo de la tarjeta */
+    background: #0052D4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* color del conteni */
+    color: white;
+}
+
+.tarjeta--2:hover {
+    cursor: pointer;
+    background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+.tarjeta--3:hover {
+    cursor: pointer;
+    background: #333333;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+.footer__tarjeta a :hover {
+    /* Color del fondo */
+    background-color: white;
+    /* color de las letras */
+    color: black;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .contenedor__tarjetas {
+        /* posición relatica */
+        position: relative;
+        /* hasta arriba */
+        top: 0;
+        /* configuración de los márgenes */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
